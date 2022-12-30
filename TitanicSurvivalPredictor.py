@@ -46,12 +46,12 @@ def TitanicAIModel():
 	global model,modelNo
 	modelNo=int(input("Enter the model you want to use in numerical value \n\t(1 -- Logistic Regression Model\n\t2 -- Decision Tree Model\n\t3 -- Random Forest Model(default)\n\t4 -- Neural Network)\n : "))
 	if modelNo==1:
-	   model=LogisticRegression()
+	   model=LogisticRegression(max_iter=771)
 	elif modelNo==2:
 	   model=DecisionTreeClassifier()
 	elif modelNo==3:
 	   model=RandomForestClassifier()
-	elif modelNo==1:
+	elif modelNo==4:
 	   model=MLPClassifier()
 	model.fit(X_train,y_train)
 	print(f"Model changed to {model}")
